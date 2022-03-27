@@ -1,19 +1,19 @@
 {
-	"name": "chuck-norris",
-	"description": "Gets a joke from the chuck norris API",
+	"name": "crawler",
+	"description": "Logs every single single contained in an entire website",
 	"version": "0.0.1",
 	"license": "UNLICENSED",
 	"bin": {
-		"chuckNorris": "index.js",
-		"joke": "index.js"
+		"crawler": "index.js",
+		"crawl": "index.js"
 	},
 	"author": {
 		"name": "Clinton",
-		"email": "ucmodulus91@gmail.com",
-		"url": "ugoson.com"
+		"email": "onuigbo.clinton8310@gmail.com",
+		"url": "https://clinton594.github.io/ugoson"
 	},
 	"keywords": [
-		"chuckNorris",
+		"crawler",
 		"Clinton"
 	],
 	"files": [
@@ -24,13 +24,13 @@
 		"format": "prettier --write \"./**/*.{js,json}\""
 	},
 	"dependencies": {
-		"axios": "^0.26.1",
 		"chalk": "^4.1.2",
 		"cli-alerts": "^1.2.2",
 		"cli-handle-error": "^4.4.0",
 		"cli-handle-unhandled": "^1.1.1",
 		"cli-meow-help": "^2.0.2",
 		"cli-welcome": "^2.2.2",
+		"jquery": "^3.6.0",
 		"meow": "^9.0.0"
 	},
 	"devDependencies": {
