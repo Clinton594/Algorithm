@@ -23,6 +23,12 @@ const flags = {
 		type: `boolean`,
 		alias: `v`,
 		desc: `Print CLI version`
+	},
+	clear: {
+		type: `number`,
+		default: 1,
+		alias: `n`,
+		desc: `Number of parallel workers`
 	}
 };
 
