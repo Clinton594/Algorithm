@@ -17,8 +17,8 @@ const flags = cli.flags;
 const { clear, debug } = flags;
 
 (async () => {
-	init({ clear });
+	// init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
 
-	crawl({ url: input[1] });
+	crawl({ url: input[1], n: input[0] });
 })();
