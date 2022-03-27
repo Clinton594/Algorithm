@@ -1,6 +1,6 @@
 const insertionSort = (arr, index = 1) => {
   if (index <= arr.length) {
-    let rundown = [index][0];
+    let rundown = index;
     while (arr[rundown] < arr[rundown - 1]) {
       const temp = arr[rundown - 1];
       arr[rundown - 1] = arr[rundown];
@@ -12,5 +12,7 @@ const insertionSort = (arr, index = 1) => {
   } else return arr;
 };
 
-const result = insertionSort([3, 4, 3, 67, 100, 5, 44, 5, 6, 77, 8, 6, 4, 34]);
+// const data = [3, 4, 3, 67, 100, 5, 44, 5, 6, 77, 8, 6, 4, 34];
+const data = Array.apply(null, { length: 10000 }).map(Function.call, Math.random);
+const result = insertionSort(data);
 console.log(result);
