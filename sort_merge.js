@@ -1,3 +1,13 @@
+/** 
+ * 
+ * @param {*} arr1 
+ * @param {*} arr2 
+ * @returns 
+ * 
+ * 
+  This splits up an array into two halves until each gets to the lowest value of 1 or 0 length
+  Then starts merging each singly splited arrays by comparing and sorting the values back up till the parent array
+ */
 const merge = (arr1, arr2) => {
   let left = 0;
   let right = 0;
