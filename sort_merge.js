@@ -2,16 +2,17 @@ const merge = (arr1, arr2) => {
   let left = 0;
   let right = 0;
   let result = [];
-  while (left < arr1.length || right < arr2.length) {
+  while (left < arr1.length && right < arr2.length) {
     if (arr1[left] < arr2[right]) {
       result.push(arr1[left]);
       left++;
     } else {
+      console.log(right);
       result.push(arr2[right]);
       right++;
     }
   }
-  // console.log(result);
+  result = [...result, ...arr1.slice(left, arr1.length), ...arr2.slice(right, arr2.length)];
   return result;
 };
 
@@ -24,5 +25,5 @@ const mergeSort = (arr) => {
   return merge(left, right);
 };
 
-const result = merge([71], [83]);
+const result = mergeSort([56, 716, 83]);
 console.log(result);
