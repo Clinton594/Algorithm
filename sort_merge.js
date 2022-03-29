@@ -4,10 +4,10 @@
  * @param {*} arr2 
  * @returns 
  * 
- * 
   This splits up an array into two halves until each gets to the lowest value of 1 or 0 length
   Then starts merging each singly splited arrays by comparing and sorting the values back up till the parent array
  */
+
 const merge = (arr1, arr2) => {
   let left = 0;
   let right = 0;
@@ -17,7 +17,6 @@ const merge = (arr1, arr2) => {
       result.push(arr1[left]);
       left++;
     } else {
-      console.log(right);
       result.push(arr2[right]);
       right++;
     }
@@ -35,5 +34,5 @@ const mergeSort = (arr) => {
   return merge(left, right);
 };
 
-const result = mergeSort([56, 716, 83]);
+const result = mergeSort([11, 40, 40, 50, 43, 10, 30, 42, 20, 6, 19, 32, 20, 41, 23, 27]);
 console.log(result);
