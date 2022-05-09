@@ -20,5 +20,8 @@ const { clear, debug } = flags;
 	// init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
 
-	crawl({ url: input[1], n: input[0] });
+	crawl({
+		url: 'https://demos.webicode.com/html/ico-chain/html/',
+		n: 1
+	});
 })();

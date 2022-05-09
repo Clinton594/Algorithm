@@ -1,0 +1,5 @@
+{
+  "/[EXPRESSIONS]/FLAGS":"Regex format",
+  "[^abc]":"Used to excludes a,b&c in character set",
+  "[abc]":"Matches a or b or c in character set"
+}

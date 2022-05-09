@@ -5,13 +5,14 @@
   "main": "big-0-notation.js",
   "scripts": {
     "start": "big-0-notation.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [],
-  "author": "",
+  "author": "Onuigbo Clinton <32768102+Clinton594@users.noreply.github.com>",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
     "request": "^2.88.2"
-  }
+  },
+  "repository": "https://github.com/Clinton594/Algorithm.git"
 }
