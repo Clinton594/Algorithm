@@ -15,24 +15,24 @@ function getNthDigit(number, n) {
 //   return Math.floor(Math.log10(Math.abs(number))) + 1;
 // }
 const digitCount = (number) => {
-  if (number < 0) number = number * -1;
+  if (number < 0) number = number * -1; //Convert to positive
   return number.toString().length;
 };
 
 const radixSort = (arr, iteration = 0) => {
   let maxIteration = 0;
-  let iterationCount = 0;
+  let index = 0;
   let build = [];
-  while (iterationCount < arr.length) {
-    const n = getNthDigit(arr[iterationCount], iteration);
-    const c = digitCount(arr[iterationCount]);
+  while (index < arr.length) {
+    const n = getNthDigit(arr[index], iteration);
+    const c = digitCount(arr[index]);
     if (c > maxIteration) maxIteration = c;
     if (!build[n]) build[n] = [];
-    build[n].push(arr[iterationCount]);
-    iterationCount++;
+    build[n].push(arr[index]);
+    index++;
   }
   iteration++;
-  build = build.reduce((a, b) => [...a, ...b]);
+  build = build.reduce((a, b) => [...a, ...b]); //flatten the build
 
   if (iteration < maxIteration) return radixSort(build, iteration);
   else return build;

@@ -4,6 +4,7 @@ const isAnagram = (word1, word2) => {
     .split("")
     .sort((a, b) => a.localeCompare(b))
     .join("");
+
   word2 = word2
     .toLowerCase()
     .split("")
