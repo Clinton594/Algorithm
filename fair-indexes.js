@@ -1,18 +1,19 @@
-const sum = (a) => a.length && a.reduce((x, y) => x + y);
+const sum = (a) => a.reduce((x, y) => x + y);
 
 const fairindex = (A, B) => {
   let indexes = 0;
 
-  for (let i = 0; i < A.length - 1; i++) {
-    const leftA = A.slice(0, i + 1);
-    const rightA = A.slice(i + 1);
+  let leftA = 0;
+  let rightA = sum(A.slice(0));
+  let leftB = 0;
+  let rightB = sum(B.slice(0));
 
-    const leftB = B.slice(0, i + 1);
-    const rightB = B.slice(i + 1);
-
-    if (sum(leftA) === sum(rightA) && sum(leftB) === sum(rightB) && sum(leftA) === sum(rightB)) {
-      indexes++;
-    }
+  for (let i = 0; i < A.length; i++) {
+    leftA += A[i];
+    rightA -= A[i];
+    leftB += B[i];
+    rightB -= B[i];
+    if (leftA === rightA && leftB === rightB && leftA === rightB) indexes++;
   }
   return indexes;
 };
